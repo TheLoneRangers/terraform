@@ -34,7 +34,7 @@ resource "proxmox_vm_qemu" "cloudinit-test" {
   scsihw =  "lsi"
 
   disk {
-    size = 10
+    size = 10G
     type = "virtio"
     storage = "ceph-storage-pool"
     storage_type = "rbd"
