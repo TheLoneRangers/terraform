@@ -21,7 +21,7 @@ resource "proxmox_vm_qemu" "cloudinit-test" {
 
   pool = "vm1"
 
-  clone = "VM 9000"
+  clone = "9000"
 
   agent = 1
 
@@ -37,7 +37,6 @@ resource "proxmox_vm_qemu" "cloudinit-test" {
     size = "10G"
     type = "virtio"
     storage = "ceph-storage-pool"
-    // storage_type = "rbd"
     iothread = 1
     ssd = 1
     discard = "on"
