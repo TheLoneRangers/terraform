@@ -17,11 +17,11 @@ resource "proxmox_vm_qemu" "cloudinit-test" {
   name = "terraform-vm-test"
   desc = "test to see if this works"
 
-  target_node = "Datacenter"
+  target_node = "vm1"
 
   pool = "vm1"
 
-  clone = "9000"
+  clone = "VM 9000"
 
   agent = 1
 
