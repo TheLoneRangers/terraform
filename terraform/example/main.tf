@@ -17,7 +17,7 @@ resource "proxmox_vm_qemu" "cloudinit-test" {
   name = "terraform-vm-test"
   desc = "test to see if this works"
 
-  target_node = "vm1"
+  target_node = "vms"
 
   pool = "vm1"
 
