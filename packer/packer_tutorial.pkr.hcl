@@ -9,7 +9,7 @@ packer {
 
 variable "docker_image" {
   type = string
-  default = "ubuntu:xenial"
+  default = "ubuntu:focal"
 }
 
 source "docker" "ubuntu" {
@@ -32,5 +32,10 @@ build {
   }
   provisioner "shell" {
     inline = ["echo Running ${var.docker_image} Docker image."]
+  }
+  post-processor "docker-tag" {
+    repository = "learn-packer"
+    tags = ["ubuntu-focal", "packer-rocks"]
+    only = ["docker.ubuntu"]
   }
 }
