@@ -36,7 +36,7 @@ resource "proxmox_vm_qemu" "cloudinit-test" {
   disk {
     size = "10G"
     type = "virtio"
-    storage = "ceph-storage-pool"
+    // storage = "ceph-storage-pool"
     iothread = 1
     ssd = 1
     discard = "on"
