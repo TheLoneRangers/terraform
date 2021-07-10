@@ -48,13 +48,7 @@ resource "proxmox_vm_qemu" "cloudinit-test" {
     tag = 256
   }
 
-  initialization {
-    ip_config {
-      ipv4 {
-        address = "dhcp"
-      }
-    }
-  }
+  ipconfig0 = "ip=dhcp"
 
   sshkeys = <<EOF
   ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMa9BkreshcNcL0bVKR5xEtH/JoGOv/h3rEFF90FuCl1 jhargr200@gmail.com
