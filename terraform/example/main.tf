@@ -48,9 +48,11 @@ resource "proxmox_vm_qemu" "cloudinit-test" {
     tag = 256
   }
 
-  ip_config {
-    ipv4 {
-      address = "dhcp"
+  initialization {
+    ip_config {
+      ipv4 {
+        address = "dhcp"
+      }
     }
   }
 
