@@ -16,4 +16,13 @@ build {
   sources = [
     "source.docker.ubuntu"
   ]
+  provisioner "shell" {
+    environment_vars = [
+      "FOO=Hello world",
+    ]
+    inline = [
+      "echo Adding file to docker container",
+      "echo \"FOO is $FOO\" > example.txt",
+    ]
+  }
 }
