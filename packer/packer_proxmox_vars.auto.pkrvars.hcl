@@ -10,7 +10,7 @@ ssh_fullname = "packer"
 ssh_username = "packer"
 ssh_password = "packer"
 
-hostname = 
+hostname = "ubuntu-cloudinit"
 vmid = "VM 9000"
 locale = "en_US"
 cores = 1
