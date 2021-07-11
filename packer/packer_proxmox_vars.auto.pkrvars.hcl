@@ -16,7 +16,7 @@ locale = "en_US"
 cores = 1
 sockets = 1
 memory = 2048
-disk_size = 10G
+disk_size = "10G"
 datastore = "local"
 datastore_type = "directory"
 
