@@ -1,7 +1,4 @@
-variable "proxmost_host" {
-    type = string
-    default = "192.168.1.53:8006"
-}
+proxmox_host = "192.168.1.53:8006"
 proxmox_node_name = "vm"
 proxmox_api_user = "{{ env `PM_USER` }}"
 proxmox_api_password = "{{ env `PM_PASS` }}"
