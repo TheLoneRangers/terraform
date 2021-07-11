@@ -58,9 +58,9 @@ resource "proxmox_vm_qemu" "cloudinit-test" {
 
   provisioner "remote-exec" {
     inline = [
+      "apt-get update"
+      "apt-get install qemu-guest-agent"
       "ip a"
     ]
   }
-}
-
 }
