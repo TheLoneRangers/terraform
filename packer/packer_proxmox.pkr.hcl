@@ -5,12 +5,12 @@ variable "proxmox_host" {
 
 variable "proxmox_api_user" {
   type = string
-  default = env(PM_USER)
+  default = ""
 }
 
 variable "proxmox_api_password" {
   type = string
-  default = env(PM_PASS)
+  default = ""
 }
 
 variable "proxmox_node_name" {
