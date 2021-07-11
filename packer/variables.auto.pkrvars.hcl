@@ -11,7 +11,7 @@ ssh_username = "packer"
 ssh_password = "packer"
 
 hostname = "ubuntu-cloudinit"
-vmid = "VM 9000"
+vmid = "9000"
 locale = "en_US"
 cores = 1
 sockets = 1
@@ -19,5 +19,8 @@ memory = 2048
 disk_size = "10G"
 datastore = "local"
 datastore_type = "directory"
+
+preseed_file = "preseed.cfg"
+boot_command_prefix = "<esc><esc><enter><wait>"
 
 iso = "vm:isos/focal-server-cloudimg-amd64.img"
