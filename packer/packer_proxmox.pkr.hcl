@@ -3,6 +3,97 @@ variable "proxmox_host" {
   default = ""
 }
 
+variable "proxmox_api_user" {
+  type = string
+  default = ""
+}
+
+variable "proxmox_api_password" {
+  type = string
+  default = ""
+}
+
+variable "proxmox_node_name" {
+  type = string
+  default = ""
+}
+
+variable "template_name" {
+  type = string
+  default = ""
+}
+
+variable "template_description" {
+  type = string
+  default = ""
+}
+
+variable "ssh_fullname" {
+  type = string
+  default = ""
+}
+
+variable "ssh_password" {
+  type = string
+  default = ""
+}
+
+variable "ssh_username" {
+  type = string
+  default = ""
+}
+
+variable "hostname" {
+  type = string
+  default = ""
+}
+
+variable "vmid" {
+  type = string
+  default = ""
+}
+
+variable "locale" {
+  type = string
+  default = ""
+}
+
+variable "cores" {
+  type = string
+  default = ""
+}
+
+variable "sockets" {
+  type = string
+  default = ""
+}
+
+variable "memory" {
+  type = string
+  default = ""
+}
+
+variable "disk_size" {
+  type = string
+  default = ""
+}
+
+variable "datastore" {
+  type = string
+  default = ""
+}
+
+variable "datastore_type" {
+  type = string
+  default = ""
+}
+
+variable "iso" {
+  type = string
+  default = ""
+}
+
+
 source "proxmox" "testvm" {
   boot_command = ["${var.boot_command_prefix}", "/install/vmlinuz ", "auto ", "console-setup/ask_detect=false ", "debconf/frontend=noninteractive ", "debian-installer=${var.locale} ", "hostname=${var.hostname} ", "fb=false ", "grub-installer/bootdev=/dev/sda<wait> ", "initrd=/install/initrd.gz ", "kbd-chooser/method=us ", "keyboard-configuration/modelcode=SKIP ", "locale=${var.locale} ", "noapic ", "passwd/username=${var.ssh_username} ", "passwd/user-fullname=${var.ssh_fullname} ", "passwd/user-password=${var.ssh_password} ", "passwd/user-password-again=${var.ssh_password} ", "preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/${var.preseed_file} ", "-- <enter>"]
   boot_wait    = "10s"
