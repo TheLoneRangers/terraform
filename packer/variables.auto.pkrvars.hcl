@@ -23,4 +23,5 @@ datastore_type = "directory"
 preseed_file = "preseed.cfg"
 boot_command_prefix = "<esc><esc><enter><wait>"
 
-iso = "isos/focal-server-cloudimg-amd64.img"
+// iso = "isos/focal-server-cloudimg-amd64.img"
+iso = "https://cloud-images.ubuntu.com/focal/current/focal-server-cloudimg-amd64.img"

@@ -117,7 +117,8 @@ source "proxmox" "testvm" {
     type              = "scsi"
   }
   insecure_skip_tls_verify = true
-  iso_file                 = "${var.iso}"
+  // iso_file                 = "${var.iso}"
+  iso_url             = "${var.iso}"
   memory                   = "${var.memory}"
   network_adapters {
     bridge = "vmbr0"
