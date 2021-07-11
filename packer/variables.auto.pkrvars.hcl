@@ -19,6 +19,7 @@ memory = 2048
 disk_size = "10G"
 datastore = "local"
 iso_datastore = "isos"
+iso_checksum = "https://cloud-images.ubuntu.com/focal/current/SHA256SUMS"
 datastore_type = "directory"
 
 preseed_file = "preseed.cfg"

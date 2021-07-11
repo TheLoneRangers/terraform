@@ -98,6 +98,10 @@ variable "iso_datastore" {
   default = ""
 }
 
+variable "iso_checksum" {
+  type = string
+  default = ""
+}
 
 variable "preseed_file" {
   type = string
@@ -126,6 +130,7 @@ source "proxmox" "testvm" {
   // iso_file                 = "${var.iso}"
   iso_url             = "${var.iso}"
   iso_storage_pool    = "${var.iso_datastore}"
+  iso_checksum        = "${var.iso_checksum}"
   memory                   = "${var.memory}"
   network_adapters {
     bridge = "vmbr0"
