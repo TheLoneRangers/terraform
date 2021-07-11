@@ -4,7 +4,7 @@ proxmox_api_user = "{{ env `PM_USER` }}"
 proxmox_api_password = "{{ env `PM_PASS` }}"
 
 template_name = "20.04-{{ isotime \"2006-01-02-T15-04-05\" }}"
-template_description = 
+template_description = "ubuntu-20.04'
 
 ssh_fullname = "packer"
 ssh_username = "packer"
