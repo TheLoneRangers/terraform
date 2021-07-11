@@ -8,7 +8,7 @@ source "proxmox" "testvm" {
     disk_size         = "${var.disk_size}"
     format            = "raw"
     storage_pool      = "${var.datastore}"
-    storage_pool_type = "${var.datastore_type}"
+    storage_pool_type = var.datastore_type
     type              = "scsi"
   }
   http_directory           = "./http"
