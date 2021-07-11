@@ -5,12 +5,12 @@ variable "proxmox_host" {
 
 variable "proxmox_api_user" {
   type = string
-  default = ""
+  default = "{{ env `PM_USER` }}"
 }
 
 variable "proxmox_api_password" {
   type = string
-  default = ""
+  default = "{{ env `PM_PASS` }}"
 }
 
 variable "proxmox_node_name" {
@@ -116,7 +116,6 @@ source "proxmox" "testvm" {
     storage_pool_type = "${var.datastore_type}"
     type              = "scsi"
   }
-  http_directory           = "./http"
   insecure_skip_tls_verify = true
   iso_file                 = "${var.iso}"
   memory                   = "${var.memory}"
