@@ -18,6 +18,7 @@ sockets = 1
 memory = 2048
 disk_size = "10G"
 datastore = "local"
+iso_datastore = "isos"
 datastore_type = "directory"
 
 preseed_file = "preseed.cfg"

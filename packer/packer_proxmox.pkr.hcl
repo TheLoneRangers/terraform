@@ -93,6 +93,12 @@ variable "iso" {
   default = ""
 }
 
+variable "iso_datastore" {
+  type = string
+  default = ""
+}
+
+
 variable "preseed_file" {
   type = string
   default = ""
@@ -119,6 +125,7 @@ source "proxmox" "testvm" {
   insecure_skip_tls_verify = true
   // iso_file                 = "${var.iso}"
   iso_url             = "${var.iso}"
+  iso_storage_pool    = "${var.iso_datastore}"
   memory                   = "${var.memory}"
   network_adapters {
     bridge = "vmbr0"
