@@ -49,9 +49,18 @@ resource "proxmox_vm_qemu" "cloudinit-test" {
   }
 
   ipconfig0 = "ip=dhcp"
+  ciuser = "malacalypse"
 
+# from shire on my end
   sshkeys = <<EOF
   ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMa9BkreshcNcL0bVKR5xEtH/JoGOv/h3rEFF90FuCl1 jhargr200@gmail.com
   EOF
+
+  provisioner "remote-exec" {
+    inline = [
+      "ip a"
+    ]
+  }
+}
 
 }
