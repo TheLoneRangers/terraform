@@ -11,7 +11,9 @@ ssh_username = "packer"
 ssh_password = "packer"
 
 hostname = "ubuntu-cloudinit"
-vmid = "9000"
+// vmid = "9000"
+// might need to increment this...seems like it tries to create with this vmid
+vmid = "100"
 locale = "en_US"
 cores = 1
 sockets = 1
