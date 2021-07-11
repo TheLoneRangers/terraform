@@ -5,12 +5,12 @@ variable "proxmox_host" {
 
 variable "proxmox_api_user" {
   type = string
-  default = ""
+  default = env("PKR_VAR_PM_USER")
 }
 
 variable "proxmox_api_password" {
   type = string
-  default = ""
+  default = env("PKR_VAR_PM_PASS")
 }
 
 variable "proxmox_node_name" {
