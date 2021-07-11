@@ -5,34 +5,34 @@ source "proxmox" "testvm" {
   cores        = "${var.cores}"
   disks {
     cache_mode        = "writeback"
-    disk_size         = "${var.disk_size}"
+    disk_size         = var.disk_size
     format            = "raw"
-    storage_pool      = "${var.datastore}"
+    storage_pool      = var.datastore\
     storage_pool_type = var.datastore_type
     type              = "scsi"
   }
   http_directory           = "./http"
   insecure_skip_tls_verify = true
-  iso_file                 = "${var.iso}"
-  memory                   = "${var.memory}"
+  iso_file                 = var.iso
+  memory                   = var.memory
   network_adapters {
     bridge = "vmbr0"
     model  = "virtio"
   }
-  node                 = "${var.proxmox_node_name}"
+  node                 = var.proxmox_node_name
   os                   = "l26"
-  password             = "${var.proxmox_api_password}"
+  password             = var.proxmox_api_password
   proxmox_url          = "https://${var.proxmox_host}/api2/json"
   qemu_agent           = true
-  sockets              = "${var.sockets}"
-  ssh_password         = "${var.ssh_password}"
+  sockets              = var.sockets
+  ssh_password         = var.ssh_password
   ssh_timeout          = "90m"
-  ssh_username         = "${var.ssh_username}"
-  template_description = "${var.template_description}"
+  ssh_username         = var.ssh_username
+  template_description = var.template_description
   unmount_iso          = true
-  username             = "${var.proxmox_api_user}"
-  vm_id                = "${var.vmid}"
-  vm_name              = "${var.template_name}"
+  username             = var.proxmox_api_user
+  vm_id                = var.vmid
+  vm_name              = var.template_name
 }
 
 build {
