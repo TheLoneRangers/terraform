@@ -5,7 +5,7 @@ variable "esxi_username" {
 }
 
 variable "esxi_password" {
-  description = "ESXI password"
-  type        = string
-  sensitive   = string
+    description = "ESXI password"
+    type        = string
+    sensitive   = true
 }
