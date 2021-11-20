@@ -17,17 +17,18 @@ provider "esxi" {
   esxi_hostssl       = "443"
   esxi_username      = var.esxi_username
   esxi_password      = var.esxi_password
+
 }
 
 resource "esxi_guest" "vmtest" {
-  guest_name         = "vmtest"
-  disk_store         = "vmware1"
+  guest_name = "vmtest"
+  disk_store = "vmware1"
 
   #
   #  Specify an existing guest to clone, an ovf source, or neither to build a bare-metal guest vm.
   #
   #clone_from_vm      = "Templates/centos7"
-  ovf_source        = "https://cloud-images.ubuntu.com/focal/current/focal-server-cloudimg-amd64.ova"
+  ovf_source = "https://cloud-images.ubuntu.com/focal/current/focal-server-cloudimg-amd64.ova"
 
   network_interfaces {
     virtual_network = "VM Network"
