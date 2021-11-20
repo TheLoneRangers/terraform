@@ -12,7 +12,7 @@ terraform {
 }
 
 provider "esxi" {
-  esxi_hostname      = "192.168.1.53"
+  esxi_hostname      = "esxi"
   esxi_hostport      = "22"
   esxi_hostssl       = "443"
   esxi_username      = var.esxi_username
