@@ -4,6 +4,8 @@ Uses the https://github.com/josenk/terraform-provider-esxi provider. Follow the 
 
 ## Using
 1. Put creds in a file called `secrets.tfvars`.
+    1a. > esxi_username = [your username]
+        > esxi_password = [your password]
 2. Add `secrets.tfvars` to your `.gitignore` file.
 3. `terraform fmt` (and push the changes)
 4. `terraform plan -var-file="secret.tfvars"`
