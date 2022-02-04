@@ -13,7 +13,6 @@ provider "openstack" {
   password    = var.os_password
   auth_url    = "https://192.168.1.49:5000/v3/"
   region      = "RegionOne"
-  ignore_cert_warning   = true
 }
 
 resource "openstack_compute_instance_v2" "test" {
