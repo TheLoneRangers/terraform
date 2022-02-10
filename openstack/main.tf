@@ -18,7 +18,7 @@ provider "openstack" {
 resource "openstack_compute_instance_v2" "test" {
     name        = "test"
     image_id    = "08313400-bc7b-46fb-9570-e91853bff0d0"
-    flavor_name = "m1.medium"
+    flavor_id   = "3"
     user_data   = "${file("user-data")}"
 
     network {
