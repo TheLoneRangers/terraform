@@ -2,7 +2,7 @@ terraform {
   required_providers {
     openstack = {
       source = "terraform-provider-openstack/openstack"
-      version = "1.46.0"
+      version = "1.47.0"
     }
   }
 }
@@ -11,7 +11,7 @@ provider "openstack" {
   user_name   = var.os_username
   tenant_name = var.os_username
   password    = var.os_password
-  auth_url    = "https://192.168.1.49:5000/v3/"
+  auth_url    = "https://192.168.1.49:8774/v2.1"
   region      = "RegionOne"
 }
 
