@@ -6,7 +6,7 @@ terraform {
     }
     proxmox = {
       source = "Telmate/proxmox"
-      version = "2.7.3"
+      version = "2.9.10"
     }
   }
 }
@@ -15,7 +15,7 @@ provider "docker" {}
 
 #proxmox creds are exposed via environment vars
 provider "proxmox" {
-  pm_api_url = "https://192.168.1.53:8006/api2/json"
+  pm_api_url = "https://192.168.1.49:8006/api2/json"
 }
 
 resource "docker_image" "nginx" {
