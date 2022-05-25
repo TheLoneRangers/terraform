@@ -11,3 +11,6 @@ Uses the https://github.com/josenk/terraform-provider-esxi provider. Follow the 
 4. `terraform plan -var-file="secret.tfvars"`
 5. `terraform apply -var-file="secret.tfvars"`
 6. `terraform destroy -var-file="secret.tfvars"`
+
+## Deprecation
+So to fully use this you pretty much need to pay for an ESXI license. Since I'm not super excited about that, I'll be deprecating this and flipping back to Proxmox.
